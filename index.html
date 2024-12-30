@@ -2,13 +2,59 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Урок№1</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<h1>Hi</h1>
+
+	<h1>это сайт где вы можете</h1>
+	<h2>научится к создании сайтов!</h2>
+	<h3>вы можете научится этим языкам</h3>
+	<h4>HTML</h4>
+	<h5>CSS</h5>
+	<button onclick="changeContent()">Start</button>
+
+	<div id="newContent" style="display: none;">
+		<h6>Что такое программирование?</h6>
+		<h7>Программирование — это процесс создания команд для компьютера, чтобы он выполнял задачи.
+			Это как давать
+			инструкции роботу: например, попросить его посчитать что-то или показать картинку на экране.
+
+			Пример: если ты хочешь, чтобы на экране появился текст «Привет, мир!», то пишешь команду, как в примере:
+
+			python
+			Копировать код
+			print("Привет, мир!")
+			Каждая команда — это шаг, который компьютер выполняет. С помощью программирования можно создавать игры,
+			приложения и сайты, делая мир более интересным и удобным.</h7>
+	</div>
+
+
+	<script>
+		function changeContent() {
+			// Скрыть все текущие элементы
+			document.querySelector('h1').style.display = 'none';
+			document.querySelector('h2').style.display = 'none';
+			document.querySelector('h3').style.display = 'none';
+			document.querySelector('h4').style.display = 'none';
+			document.querySelector('h5').style.display = 'none';
+			document.querySelector('button').style.display = 'none';
+
+
+			// Показать новый контент
+			document.getElementById('newContent').style.display = 'block';
+
+			let h7Element = document.querySelector('h7');
+			h7Element.addEventListener('mouseenter', function () {
+				h7Element.style.transform = 'scale(1.05)';
+			});
+
+			h7Element.addEventListener('mouseleave', function () {
+				h7Element.style.transform = 'scale(1)';
+			});
+
+		}
+	</script>
 
 </body>
 
