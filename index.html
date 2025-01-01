@@ -2,80 +2,77 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-	<h1>это сайт где вы можете</h1>
-	<h2>научится к создании сайтов!</h2>
-	<h3>вы можете научится этим языкам</h3>
-	<h4>HTML</h4>
-	<h5>CSS</h5>
-	<button onclick="changeContent()">Start</button>
+    <h1>это сайт где вы можете</h1>
+    <h2>научится к создании сайтов!</h2>
+    <h3>вы можете научится этим языкам</h3>
+    <h4>HTML</h4>
+    <h5>CSS</h5>
+    <button onclick="changeContent()">Start</button>
 
-	<div id="newContent" style="display: none;">
-		<h6>Что такое программирование?</h6>
-		<h7>Программирование — это процесс создания команд для компьютера, чтобы он выполнял задачи.
-			Это как давать
-			инструкции роботу: например, попросить его посчитать что-то или показать картинку на экране.
+    <div id="newContent" style="display: none;">
+        <h6>Что такое программирование?</h6>
+        <h7>Программирование — это процесс создания команд для компьютера, чтобы он выполнял задачи.
+            Это как давать
+            инструкции роботу: например, попросить его посчитать что-то или показать картинку на экране.
 
-			Пример: если ты хочешь, чтобы на экране появился текст «Привет, мир!», то пишешь команду, как в примере:
+            Пример: если ты хочешь, чтобы на экране появился текст «Привет, мир!», то пишешь команду, как в примере:
 
-			python
-			Копировать код
-			print("Привет, мир!")
-			Каждая команда — это шаг, который компьютер выполняет. С помощью программирования можно создавать игры,
-			приложения и сайты, делая мир более интересным и удобным.</h7>
-		<h8>давайте вместе создавать сайт!
-			рекомендую использовать Vizual Studio Code для начала нужно открыть Vizual Studio Code и нажать на File и
-			после этого нажать на New File или же ctrl+shifht+Windows+N потом назовите ваш файл как index.html потому
-			что если мы подругому назавем наш файл то в будущем у нас будут проблемы с Github Pages ну а это мы изучим
-			уже потом. После создании нашего файла напишите ! восклицательный знак и нажмите Enter и мы уже видим
-			начальный HTML код.
-		</h8>
+            python
+            Копировать код
+            print("Привет, мир!")
+            Каждая команда — это шаг, который компьютер выполняет. С помощью программирования можно создавать игры,
+            приложения и сайты, делая мир более интересным и удобным.</h7>
+        <h8>давайте вместе создавать сайт!
+            рекомендую использовать Vizual Studio Code для начала нужно открыть Vizual Studio Code и нажать на File и
+            после этого нажать на New File или же ctrl+shifht+Windows+N потом назовите ваш файл как index.html потому
+            что если мы подругому назавем наш файл то в будущем у нас будут проблемы с Github Pages ну а это мы изучим
+            уже потом. После создании нашего файла напишите ! восклицательный знак и нажмите Enter и мы уже видим
+            начальный HTML код.
+        </h8>
 
-		<hr>
-		<div class="bg5-section"></div>
+        <hr>
+        <div class="bg5-section"></div>
 
+        <img src="Primer.png" class="image-class">
 
+        <h9>После этого мы видим такой код</h9>
+        <h10>Мы первым делом зададим имя для нашего сайта как мы это сделаем? нужно просто заменить "Document" внутри
+            title вы можете как угодно назвать ну а мы назавем "My first site" </h10>
 
-		<img src="Primer.png" class="image-class">
+    </div>
 
-		<h9>После этого мы видим такой код</h9>
-		<h10>Мы первым делом зададим имя для нашего сайта как мы это сделаем? нужно просто заменить "Document" внутри
-			title вы можете как угодно назвать ну а мы назавем "My first site" </h10>
+    <script>
+        function changeContent() {
+            // Скрыть все текущие элементы
+            document.querySelector('h1').style.display = 'none';
+            document.querySelector('h2').style.display = 'none';
+            document.querySelector('h3').style.display = 'none';
+            document.querySelector('h4').style.display = 'none';
+            document.querySelector('h5').style.display = 'none';
+            document.querySelector('button').style.display = 'none';
 
+            // Показать новый контент
+            document.getElementById('newContent').style.display = 'block';
 
-	</div>
+            let h7Element = document.querySelector('h7');
+            h7Element.addEventListener('mouseenter', function () {
+                h7Element.style.transform = 'scale(1.05)';
+            });
 
+            h7Element.addEventListener('mouseleave', function () {
+                h7Element.style.transform = 'scale(1)';
+            });
+        }
+    </script>
 
-	<script>
-		function changeContent() {
-			// Скрыть все текущие элементыs
-			document.querySelector('h1').style.display = 'none';
-			document.querySelector('h2').style.display = 'none';
-			document.querySelector('h3').style.display = 'none';
-			document.querySelector('h4').style.display = 'none';
-			document.querySelector('h5').style.display = 'none';
-			document.querySelector('button').style.display = 'none';
-
-
-			// Показать новый контент
-			document.getElementById('newContent').style.display = 'block';
-
-			let h7Element = document.querySelector('h7');
-			h7Element.addEventListener('mouseenter', function () {
-				h7Element.style.transform = 'scale(1.05)';
-			});
-
-			h7Element.addEventListener('mouseleave', function () {
-				h7Element.style.transform = 'scale(1)';
-			});
-
-		}
-	</script>
-
+    <!-- Google AdSense script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4660632082125852"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
